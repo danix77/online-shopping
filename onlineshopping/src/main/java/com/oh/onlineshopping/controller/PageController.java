@@ -12,9 +12,9 @@ public class PageController {
 	@RequestMapping(value = {"/", "/home", "/index"})
 	public ModelAndView index() {		
 		ModelAndView mv = new ModelAndView("page");		
-		mv.addObject("greeting","Welcome oh!");
-		/*mv.addObject("title","Home");
-		mv.addObject("userClickHome",true);*/
+		/*mv.addObject("greeting","Welcome oh!");*/
+		mv.addObject("title","Home");
+		mv.addObject("userClickHome",true);
 		return mv;				
 	}
 	
@@ -39,7 +39,7 @@ public class PageController {
 		mv.addObject("greeting",greeting);
 		return mv;
 	}*/
-	/*@RequestMapping(value = "/about")
+	@RequestMapping(value = "/about")
 	public ModelAndView about() {		
 		ModelAndView mv = new ModelAndView("page");		
 		mv.addObject("title","About Us");
@@ -53,6 +53,6 @@ public class PageController {
 		mv.addObject("title","Contact Us");
 		mv.addObject("userClickContact",true);
 		return mv;				
-	}		*/
+	}		
 	
 }
